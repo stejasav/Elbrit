@@ -1,38 +1,656 @@
-.App {
+*{
+  box-sizing: border-box;
+}
+
+.container{
+  overflow-x: hidden;
+}
+
+/***************************************************************************************************************************************************************************************************/
+
+/* FRONT */
+.blue{
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(226, 245, 251, 1);
+  overflow-x: hidden;
+  position: relative;
+}
+
+.blue h1{
+  font-size: 968%;
+  font-weight: 700;
+  line-height: 211px;
+  color: rgba(0, 53, 105, 1);  
+  margin: 0%;
+  text-align: center;
+  padding-top: 1%;
+}
+
+.probiotic{
+  max-width: 26%;
+  margin-left: 36%;
+  margin-top: -5.5%;
+}
+
+.circle1{
+  position: absolute;
+  top: 75%;
+  left: 16%;
+}
+
+.circle2{
+  position: absolute;
+  top: 75%;
+  left: 12.7%;
+}
+
+.info1-container,
+.info2-container{
+  position: absolute;
+  top: 39%;
+  left: 15%;
+  display: flex;
+  flex-direction: column;
+  max-width: 23%;
+  padding: 1%;
+}
+
+.info1{
+  font-family: Jost;
+  font-size: 162.5%;
+  font-weight: 400;
+  line-height: 25px;
+  color: rgba(114, 114, 114, 1);
+  margin: 2% 0% 5% 0%;
+}
+
+.info2{
+  font-family: Jost;
+  font-size: 212%;
+  font-weight: 600;
+  line-height: 40px;
+  color: rgba(23, 65, 79, 1);
+  margin: 3% 0% 4% 0%;
+}
+
+.info1-container button{
+  font-family: Jost;
+  font-size: 125%;
+  font-weight: 600;
+  line-height: 56px;
+  background-color: rgba(23, 65, 79, 1);
+  color: rgba(255, 255, 255, 1);
+  margin: 8% 50% 0 0;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.info1-container button:hover {
+  background-color: rgba(0, 53, 105, 1);
+}
+
+.info2-container{
+  left: 66%;
+  top: 33%;
+}
+
+.profits{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12%;
+}
+
+.profits img{
+  margin-right: 5%;
+}
+
+.profits img[alt="Weight Loss"] {
+  margin-left: -10%;
+}
+
+.elements{
+  font-family: Jost;
+  font-size: 162%;
+  font-weight: 600;
+  color: rgba(23, 65, 79, 1);
+  margin: 0;
+}
+
+.element-info{
+  font-family: Roboto;
+  font-size: 87%;
+  font-weight: 400;
+  color: rgba(114, 114, 114, 1);  
+  margin: 1% 0;
+}
+
+/***************************************************************************************************************************************************************************************************/
+
+/* SPECIFICATIONS */
+
+.specification-container{
+  position: relative;
+  z-index: 1;
+  background-color: rgba(23, 65, 79, 1);
+  border-radius: 65px;
+  display: flex;
+  flex-direction: column;
+  margin: -8% 10% 5% 10%;
+  padding: 5px;
+}
+
+.specification-top,
+.specification-bottom{
+  margin-top: -6%;
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3%;
+}
+
+.specification-bottom{
+  margin-top: 2%;
+}
+
+.specify{
+  max-width: 264px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.s1{
+  font-family: Jost;
+  font-size: 26px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  margin-bottom: 0%;  
+}
+
+.s2{
+  font-family: Jost;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(217, 217, 217, 1);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/***************************************************************************************************************************************************************************************************/
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* INGREDIENTS */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.ingredients-container{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin: 4% 16% 1% 11%;
+  padding: 5px;
+}
+
+.ingredients-top,
+.ingredients-bottom{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.ingredient-text{
+  max-width: 37%;
+  margin-right: 5px;
+}
+
+.heading{
+  color: rgba(0, 53, 105, 1);
+  font-family: Jost;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 2% 0% 3% 0%;
+}
+
+.subheading{
+  font-family: Jost;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 52px;
+  color: rgba(23, 65, 79, 1);
+  margin: 0% 0% 6% 0%;
+}
+
+.desc{
+  font-size: 14px;
+  padding: 0px 12px 0px 0px;
+  color:rgb(149, 149, 149);
+}
+
+.ingredient{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-right: 5px;
+  padding: 25px 110px 0px 30px;
+  border-radius: 15px;
+}
+
+.ingredient[data-name="Vitamin C"] {
+  background-image: url(/public/img/vitaminc.png);
+}
+
+.ingredient[data-name="Vitamin B3"] {
+  background-image: url(../public/img/vitaminb3.png);
+}
+
+.ingredient[data-name="Magnesium"] {
+  background-image: url(../public/img/magnesium.png);
+}
+
+.ingredient[data-name="Hyaluronic Acid"] {
+  background-image: url(../public/img/acid.png);
+}
+
+.ingredient[data-name="Lactobacillus"] {
+  background-image: url(../public/img/lacto.png);
+}
+
+.p1{
+  font-family: Jost;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 36px;
+  color: rgba(45, 63, 89, 1);
+  margin-top: 10px;
+}
+
+.p2{
+  color: rgba(114, 114, 114, 1);
+  font-family: Jost;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  margin-top: -20px;  
+  margin-bottom: 30px;
+}
+
+.p3{
+  font-family: Jost;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: underline;
+  color: rgba(0, 53, 105, 1);
+  margin-top: 70px;
+}
+
+
+/***************************************************************************************************************************************************************************************************/
+
+.blog{
+  font-family: Jost;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+  color: rgba(0, 53, 105, 1);
+  margin-bottom: 0;
+}
+
+.latest{
+  font-family: Jost;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 52px;
+  text-align: center;
+  color: rgba(23, 65, 79, 1); 
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+/***************************************************************************************************************************************************************************************************/
+
+/* GRID */
+
+.pill-container {
+  display: flex;
+  margin: 4% 15% 3% 15%;
+  padding: 5px;
+  gap: 16px;
+}
+
+.pill-slide {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.pill-slide img {
+  max-width: 280px;
+  height: auto;
+  object-fit: contain;
+}
+
+.pill8{
+  min-width: 320px;
+}
+
+/***************************************************************************************************************************************************************************************************/
+
+/* FOOTER */
+
+.footer-container {
+  background-color: #2c3e50;
+  color: #ffffff;
+  padding: 3% 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-content {
+  text-align: center;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  margin-bottom: 2%;
 }
 
-.App-link {
-  color: #61dafb;
+.footer-item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: rgba(33, 93, 114, 1);
+  border-radius: 30px;
+  margin: 0.5% 2%;
+  width: 100%;
+  max-width: 29%;
+  padding: 1%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.footer-item img{
+  max-width: 50px;
+}
+
+.box-text{
+  margin: 0% 6%;
+  padding-top: 3%;
+  text-align: left;
+}
+
+.mail{
+  margin-top: 15%;
+}
+
+h4 {
+  font-size: 115%;
+  font-weight: bold;
+  margin-top: -5%;
+}
+
+.footer-logo {
+  margin: 1% 1% 1% 2.5%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo{
+  max-width: 40%;
+  margin-right: 5%;
+}
+
+.logo-text {
+  margin-top: 10px;
+}
+
+.logo-text p{
+  margin: 1.2% 0%;
+  font-size: 110%;
+
+}
+
+.footer-address {
+  font-size: 90%;
+  margin-top: 1%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: 2.3%;
+  flex-wrap: wrap;
+}
+
+.loc{
+  margin-right: 0.5%;
+}
+
+/***************************************************************************************************************************************************************************************************/
+
+
+@media (max-width: 768px) {
+
+
+  /* FRONT */
+
+  .blue{
+    padding: 3%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .blue h1{
+    font-size: 500%;
+    line-height: 70px;
+    text-align: left;
+    margin-top: 5%;
+    position: relative;
+    z-index: 1;
+  }
+
+
+  .probiotic{
+    position: absolute;
+    max-width: 35%;
+    top: 32%;
+    right: 10%;
+  }
+
+  .circle1{
+    top: 95%;
+    left: 3%;
+  }
+
+  .circle2{
+    top: 95%;
+    left: 14%;
+  }
+
+  .info1-container,
+  .info2-container{
+    position: relative;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    margin: 2% 2% 2% 2%;
+  }
+
+  .info1{
+    margin: 4% 0% 2% 0%;
+  }
+
+  .info2{
+    margin: 2% 0% 0% 0%;
+  }
+
+  .info1-container button{
+    margin: 7% 50% 0 0;
+  }
+
+  .info2-container{
+    padding-left: 0;
+    left: 0;
+    top: 3%;
+    margin: 5% 2% 2% -5.5%;
+  }
+
+  .profits img[alt="Weight Loss"] {
+    margin-left: -13%;
+  }
+
+  .profits img[alt="Functional Foods"] {
+    margin-left: -8%;
+  }
+
+  /* SPECIFICATIONS */
+  
+  .specification-container{
+    margin: 4% 2% 3% 2%;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    border-radius: 30px;
+  }
+  
+  .specification-top,
+  .specification-bottom{
+    margin-top: 4%;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 0%;
+  }
+  
+  .specification-bottom{
+    margin-top: 0%;
+  }
+  
+
+  /* INGREDIENTS */
+
+  .ingredients-container{
+    margin: 4% 2% 3% 2%;
+    padding: 0;
+  }
+  
+  .ingredients-top,
+  .ingredients-bottom{
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+  
+  .ingredient-text{
+    max-width: none;
+  }
+  
+  .heading{
+    margin: 2% 0% 1% 0%;
+  }
+  
+  .subheading{
+    margin: 0% 0% 3% 0%;
+  }
+
+  .edge{
+    display: none;
+  }
+
+  /* BLOG */
+
+  .blog{
+    font-size: 13px;
+    margin-bottom: 0;
+  }
+  
+  .latest{
+    font-size: 35px;
+    margin-top: 0;
+  }
+
+  /* GRID */
+
+  .pill-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    margin: 4% 0;
+  }
+
+  .pill-slide {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 0;
+    justify-content: center;
+  }
+
+  .pill-slide div{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pill-slide img {
+    max-width: 180px;
+    height: auto;
+    margin: 5px 0;
+  }
+
+  .pill8{
+    min-width: 210px;
+    margin-top: 3px;
+  }
+
+  /* FOOTER */
+
+  .footer-content {
+    flex-direction: column; 
+  }
+
+  .footer-item {
+    margin: 10px 0; 
+    max-width: 100%;
+  }
+
+  .footer-logo {
+    flex-direction: column; 
+  }
+
+  .footer-logo p{
+    display: inline;
+    margin-right: 3px;
+  }
+
+  .logo-text{
+    margin: 5% 0%;
+  }
+
+  .phn{
+    margin-left: -70px;
+  }
+
+  .adress{
+    margin-left: 15px;
+  }
+
+  /* .loc{
+    opacity: 0;
+    margin: -10px;
+  } */
+
+  .footer-address {
+    flex-direction: row;
+    text-align: center;
+  }
+
+  .footer-address p{
+    font-size: 62.5%;
+    margin: 0;
+  }
+
+  .logo {
+    max-width: 60%;
   }
 }
